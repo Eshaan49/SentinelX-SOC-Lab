@@ -2,6 +2,8 @@
 
 > A self-hosted Security Operations Center (SOC) lab built for hands-on threat detection, investigation, and incident response — demonstrating real-world analyst skills across attack simulation, SIEM tuning, detection engineering, and formal incident reporting.
 
+![Dashboard](01-dashboard-hawkeye-active.png)
+
 ---
 
 ## 📌 Project Overview
@@ -45,6 +47,7 @@ This project was built as a portfolio piece targeting **SOC Analyst internship r
 
 ### INC-001 — Brute Force Attack
 **MITRE:** T1110 (Brute Force) | **Tactic:** Credential Access | **Rule:** 60204 | **Level:** 10
+![Brute Force Alert](02-scenario1-brute-force-alert.png)
 
 Simulated 10 rapid failed login attempts using a PowerShell `net use` loop against a non-existent account. Wazuh's correlation engine detected the pattern and fired a high-severity alert distinguishing it from isolated failed logins.
 
@@ -54,6 +57,8 @@ Simulated 10 rapid failed login attempts using a PowerShell `net use` loop again
 
 ### INC-002 — Suspicious PowerShell Execution (Obfuscated)
 **MITRE:** T1059.001 + T1027 | **Tactic:** Execution + Defense Evasion | **Custom Rule:** 100002 | **Level:** 12
+![Detection Gap vs Custom Rule](05-scenario2-detection-gap.png)
+![Custom Rule Level 12](03-scenario2-custom-rule-level12.png)
 
 Simulated a Base64-encoded PowerShell command using `-EncodedCommand -WindowStyle Hidden -NoProfile` flags — a classic living-off-the-land obfuscation technique. **Default Wazuh ruleset failed to flag this at meaningful severity** (buried as generic Level 3 process creation noise).
 
@@ -79,6 +84,7 @@ Payload was manually decoded and confirmed as a reconnaissance command (`Get-Pro
 
 ### INC-003 — Unauthorized User Account Creation & Privilege Escalation
 **MITRE:** T1136.001 + T1098 + T1078.003 | **Tactic:** Persistence + Privilege Escalation | **Rules:** 60109/60110 | **Level:** 8
+![Account Creation Alerts](04-scenario3-account-creation.png)
 
 Simulated an attacker creating a deceptively-named backdoor local account (`svc_backup`) and immediately adding it to the local Administrators group — a textbook persistence technique. Wazuh's native ruleset detected both events automatically with MITRE T1098 pre-mapped and compliance frameworks (GDPR, HIPAA, PCI-DSS, NIST 800-53) auto-tagged.
 
