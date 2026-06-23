@@ -183,7 +183,7 @@ Full professional incident reports are available in the `/incidents` folder, eac
 
 ## 👤 About
 
-Built by **Eshaan** as a hands-on SOC portfolio project targeting cybersecurity internship applications.
+Built by **Eshaan** as a hands-on SOC portfolio project targeting cybersecurity applications.
 
 Focused on demonstrating practical skills in threat detection, SIEM operations, and detection engineering — not just theoretical knowledge.
 
