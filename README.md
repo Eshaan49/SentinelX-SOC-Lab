@@ -1,6 +1,13 @@
 # 🛡️ SentinelX — AI-Assisted SOC Investigation Platform
 
 > A self-hosted Security Operations Center (SOC) lab built for hands-on threat detection, investigation, and incident response — demonstrating real-world analyst skills across attack simulation, SIEM tuning, detection engineering, and formal incident reporting.
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue?style=flat-square)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=flat-square)
+![Windows 11](https://img.shields.io/badge/Windows-11-0078D6?style=flat-square&logo=windows)
+![VMware](https://img.shields.io/badge/VMware-Workstation-607078?style=flat-square&logo=vmware)
+![Amazon Linux](https://img.shields.io/badge/Amazon-Linux_2023-FF9900?style=flat-square&logo=amazon-aws)
+![PowerShell](https://img.shields.io/badge/PowerShell-Attack_Simulation-5391FE?style=flat-square&logo=powershell)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
 ![Dashboard](01-dashboard-hawkeye-active.png)
 
